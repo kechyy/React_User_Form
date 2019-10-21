@@ -1,0 +1,34 @@
+@import '~antd/dist/antd.css';
+
+.register-user {
+  width: 550px;
+  margin: auto;
+  border:1px solid rgb(18, 146, 163);
+  padding: 30px;
+  margin-top: 20px;
+  background: rgb(18, 146, 163) !important;
+  border-radius:5px;
+  box-shadow: 2px 5px 30px #CCC;
+}
+.register-user h1 {
+  text-align:center;
+  border-bottom:1px dotted #ffffff;
+  margin-left:-30px;
+  margin-right: -30px;
+}
+.ant-calendar-picker {
+  width:100% !important;
+}
+.registerSubmit {
+  display: flex;
+}
+.userWrapper {
+  width: 80%;
+  margin: auto;
+}
+.userList {
+  border:1px solid #CCC;
+  margin: 30px 0px;
+  padding: 10px;
+  border-radius:5px
+}
