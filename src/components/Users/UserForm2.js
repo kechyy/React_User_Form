@@ -10,23 +10,21 @@ import UserList from './UserList';
 import { registerAction } from '../../store/registerUsers/actions'
 
 const useRegisterForm = (props) => {
-const { data } = useSelector(state => ({
-    ...state.registerReducer
-  }));
-  const dispatch = useDispatch();
+  const datas = useSelector(state => state.registerReducer.data);
+  const dispatch = useDispatch()
   let d;
   const handleSubmit = e => {
     e.preventDefault();
     props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        if(data.length !== 0 ){
-        values.key = parseInt(data.length) + 1;
-        d = [ ...data, values ]
+        if(props.data.length !== 0 ){
+        values.key = parseInt(props.data.length) + 1;
+        d = [ ...props.data, values ]
         }else {
           values.key = 1;
-          d = [ ...data, values ]
+          d = [ ...props.data, values ]
         }
-        dispatch(registerAction(d))
+        props.registerAction(d)
       }
     });
     
@@ -139,7 +137,7 @@ const { data } = useSelector(state => ({
             </Form.Item>
           </Form>
         </div>          
-        <UserList data = { data } />
+        <UserList data = { props.data } />
       </div>
     )
 }
