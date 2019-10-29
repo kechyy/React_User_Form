@@ -1,0 +1,22 @@
+[debug] [2019-10-28T23:48:17.640Z] ----------------------------------------------------------------------
+[debug] [2019-10-28T23:48:17.667Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nkechi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2019-10-28T23:48:17.667Z] CLI Version:   7.6.1
+[debug] [2019-10-28T23:48:17.667Z] Platform:      win32
+[debug] [2019-10-28T23:48:17.667Z] Node Version:  v10.15.3
+[debug] [2019-10-28T23:48:17.779Z] Time:          Mon Oct 28 2019 16:48:17 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-10-28T23:48:17.779Z] ----------------------------------------------------------------------
+[debug] [2019-10-28T23:48:17.780Z] 
+[debug] [2019-10-28T23:48:17.866Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-28T23:48:17.868Z] > authorizing via signed-in user
+[debug] [2019-10-28T23:48:17.868Z] [iam] checking project enyeregisteruser for permissions ["firebase.projects.get"]
+[debug] [2019-10-28T23:48:17.876Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/enyeregisteruser:testIamPermissions  
+
+[debug] [2019-10-28T23:48:19.767Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-28T23:48:19.773Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/enyeregisteruser  
+ 
+[debug] [2019-10-28T23:48:20.334Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-28T23:48:20.338Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/enyeregisteruser/webApps/-/config  
+ 
+[debug] [2019-10-28T23:48:20.934Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000

@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import { REGISTER_SUCCESS } from '../actionTypes';
-const initialState  = { success: false, data: [] };
+const initialState  = { success: false, data: [], error: '' };
 
 export const registerReducer = (state = initialState, { type, payload }) => {
   switch(type){
-    case REGISTER_SUCCESS : 
+    case 'REGISTER_SUCCESS_ASYNC' : 
     return {
       ...state,
-      ...payload
+      ...payload,
+      data: [...payload.data, ...state.data]
     }
     default:
       return state

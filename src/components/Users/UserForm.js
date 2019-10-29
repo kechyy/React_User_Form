@@ -7,7 +7,7 @@ import {
   Button,
 } from 'antd';
 import UserList from './UserList';
-import { registerAction } from '../../store/registerUsers/actions'
+import { registerAction } from '../../store/registerUsers/actions';
 
 const useRegisterForm = (props) => {
 const { data } = useSelector(state => ({
@@ -19,14 +19,7 @@ const { data } = useSelector(state => ({
     e.preventDefault();
     props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        if(data.length !== 0 ){
-        values.key = parseInt(data.length) + 1;
-        d = [ ...data, values ]
-        }else {
-          values.key = 1;
-          d = [ ...data, values ]
-        }
-        dispatch(registerAction(d))
+        dispatch(registerAction(values))
       }
     });
     
@@ -54,10 +47,6 @@ const { data } = useSelector(state => ({
           offset: 4,
         },
       },
-    };
-    
-    const config = {
-      rules: [{ type: 'date', required: true, message: 'Please select time!' }],
     };
     return (
       <div className="userWrapper">

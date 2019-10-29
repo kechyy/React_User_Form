@@ -3,6 +3,12 @@ import { Table } from 'antd';
 
 const columns = [
   {
+    title: 'User ID',
+    dataIndex: 'id',
+    key: 'id',
+    render: text => <a>{text}</a>,
+  },
+  {
     title: 'First Name',
     dataIndex: 'firstname',
     key: 'firstname',
